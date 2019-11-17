@@ -7,8 +7,7 @@ app.get('/', function (request, response) {
 });
 
 io.on('connection', function (socket) {
-    //var user = Date.now();
-    var user = 'Vladimir';
+    var user = Date.now();
 
     socket.on('message.sent', function (message) {
         io.emit('message', user + ': ' + message);
